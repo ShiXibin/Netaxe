@@ -1,0 +1,280 @@
+[2023-01-04 19:52:20][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2023-01-04 20:05:45][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2023-01-05 14:38:10][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2023-01-05 14:42:53][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2023-01-05 14:43:04][django.request.log_response():224] [WARNING] Not Found: /
+[2023-01-05 14:43:04][django.channels.server.log_action():149] [WARNING] HTTP GET / 404 [0.15, 127.0.0.1:49374]
+[2023-01-05 14:43:04][django.request.log_response():224] [WARNING] Not Found: /favicon.ico
+[2023-01-05 14:43:04][django.channels.server.log_action():149] [WARNING] HTTP GET /favicon.ico 404 [0.01, 127.0.0.1:49374]
+[2023-01-05 14:43:14][django.channels.server.log_action():147] [INFO] HTTP GET /admin 301 [0.00, 127.0.0.1:49374]
+[2023-01-05 14:43:14][django.channels.server.log_action():147] [INFO] HTTP GET /admin/ 302 [0.11, 127.0.0.1:49374]
+[2023-01-05 14:43:15][django.request.log_response():224] [ERROR] Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'netaxe.captcha_captchastore' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 994, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 973, in render_value_in_context
+    value = str(value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\html.py", line 376, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\forms\boundfield.py", line 93, in as_widget
+    return widget.render(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\fields.py", line 194, in render
+    self.fetch_captcha_store(name, value, attrs, self.generator)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\fields.py", line 64, in fetch_captcha_store
+    key = CaptchaStore.generate_key(generator)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\models.py", line 64, in generate_key
+    store = cls.objects.create(challenge=challenge, response=response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\models.py", line 51, in save
+    super(CaptchaStore, self).save(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'netaxe.captcha_captchastore' doesn't exist")
+[2023-01-05 14:43:15][django.channels.server.log_action():154] [ERROR] HTTP GET /admin/login/?next=/admin/ 500 [0.50, 127.0.0.1:49374]
+[2023-01-05 14:43:39][django.request.log_response():224] [ERROR] Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'netaxe.captcha_captchastore' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 994, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 973, in render_value_in_context
+    value = str(value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\html.py", line 376, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\forms\boundfield.py", line 93, in as_widget
+    return widget.render(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\fields.py", line 194, in render
+    self.fetch_captcha_store(name, value, attrs, self.generator)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\fields.py", line 64, in fetch_captcha_store
+    key = CaptchaStore.generate_key(generator)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\models.py", line 64, in generate_key
+    store = cls.objects.create(challenge=challenge, response=response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\captcha\models.py", line 51, in save
+    super(CaptchaStore, self).save(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'netaxe.captcha_captchastore' doesn't exist")
+[2023-01-05 14:43:39][django.channels.server.log_action():154] [ERROR] HTTP GET /admin/login/ 500 [0.19, 127.0.0.1:49374]
